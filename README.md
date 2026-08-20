@@ -29,7 +29,10 @@ npx serve .
 index.html      页面
 app.js          键盘 / 按钮 / 背景音乐
 style.css       样式
-bg.jpg          背景图
+bg.jpg          立绘（画框展示，同时作淡化背景）
 bgm.mp3         背景音乐
 audio/1.mp3 … 4.mp3   四句语音
+legacy/         美化前的原版页面（index.html / app.js / style.css）
 ```
+
+要看原版，用浏览器打开 `legacy/index.html`。

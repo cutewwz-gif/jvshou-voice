@@ -4,60 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>沮授语音</title>
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
+    <main class="stage">
+        <article class="panel">
+            <figure class="portrait">
+                <img src="bg.jpg" alt="沮授">
+            </figure>
 
-<div class="overlay">
+            <section class="controls">
+                <header class="heading">
+                    <p class="eyebrow">三国杀 · 语音快捷键</p>
+                    <h1>沮授语音</h1>
+                    <p class="hint">按键盘 1–4，或点按按钮</p>
+                </header>
 
-    <h1>沮授语音</h1>
-	<h1>(按键盘/触摸按钮)<h1>
+                <div class="voice-buttons">
+                    <button type="button" class="voice-btn" data-id="1" onclick="playVoice(1)">
+                        <span class="key">1</span>
+                        <span class="label">渐营</span>
+                    </button>
+                    <button type="button" class="voice-btn" data-id="2" onclick="playVoice(2)">
+                        <span class="key">2</span>
+                        <span class="label">渐营</span>
+                    </button>
+                    <button type="button" class="voice-btn" data-id="3" onclick="playVoice(3)">
+                        <span class="key">3</span>
+                        <span class="label">矢北</span>
+                    </button>
+                    <button type="button" class="voice-btn" data-id="4" onclick="playVoice(4)">
+                        <span class="key">4</span>
+                        <span class="label">阵亡</span>
+                    </button>
+                </div>
 
-    <div class="tips">
+                <div class="music">
+                    <button type="button" id="bgmButton" aria-pressed="false">
+                        <span class="when-paused">播放背景音乐</span>
+                        <span class="when-playing">暂停背景音乐</span>
+                    </button>
+                    <label class="volume">
+                        <span>音量</span>
+                        <input
+                            type="range"
+                            id="volumeSlider"
+                            min="0"
+                            max="100"
+                            value="30">
+                    </label>
+                </div>
+            </section>
+        </article>
+    </main>
 
-        <p>1渐营</p>
-        <p>2渐营</p>
-        <p>3矢北</p>
-        <p>4阵亡</p>
-
-    </div>
-	<div class="voice-buttons">
-
-    <button onclick="playVoice(1)">
-        1
-    </button>
-
-    <button onclick="playVoice(2)">
-        2
-    </button>
-
-    <button onclick="playVoice(3)">
-        3
-    </button>
-
-    <button onclick="playVoice(4)">
-        4
-    </button>
-
-</div>
-
-    <button id="bgmButton">
-        ▶ 播放背景音乐
-    </button>
-	<div class="volume">
-    <span>背景音乐音量</span><br>
-    <input
-        type="range"
-        id="volumeSlider"
-        min="0"
-        max="100"
-        value="30">
-</div>
-
-</div>
-
-<script src="app.js"></script>
-
+    <script src="app.js?v=2"></script>
 </body>
 </html>

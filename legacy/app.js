@@ -2,7 +2,7 @@
 // 背景音乐
 // =======================
 
-const bgm = new Audio("bgm.mp3");
+const bgm = new Audio("../bgm.mp3");
 bgm.loop = true;
 bgm.volume = 0.3; // 默认30%音量
 
@@ -11,26 +11,30 @@ const slider = document.getElementById("volumeSlider");
 
 let playing = false;
 
-function setBgmPlaying(next) {
-    playing = next;
-    button.classList.toggle("is-playing", playing);
-    button.setAttribute("aria-pressed", playing ? "true" : "false");
-}
-
 // 播放 / 暂停背景音乐
 button.onclick = function () {
+
     if (playing) {
+
         bgm.pause();
-        setBgmPlaying(false);
+        button.innerText = "▶ 播放背景音乐";
+
     } else {
+
         bgm.play();
-        setBgmPlaying(true);
+        button.innerText = "⏸ 暂停背景音乐";
+
     }
+
+    playing = !playing;
+
 };
 
 // 调节背景音乐音量
 slider.addEventListener("input", function () {
+
     bgm.volume = this.value / 100;
+
 });
 
 
@@ -40,26 +44,17 @@ slider.addEventListener("input", function () {
 
 let currentAudio = null;
 
-function setActiveVoice(id) {
-    document.querySelectorAll(".voice-btn").forEach(function (el) {
-        el.classList.toggle("is-active", String(el.dataset.id) === String(id));
-    });
-}
-
 function playVoice(id) {
+
     // 停止上一句
     if (currentAudio) {
         currentAudio.pause();
         currentAudio.currentTime = 0;
     }
 
-    setActiveVoice(id);
-
-    currentAudio = new Audio("audio/" + id + ".mp3");
+    currentAudio = new Audio("../audio/" + id + ".mp3");
     currentAudio.play();
-    currentAudio.addEventListener("ended", function () {
-        setActiveVoice(null);
-    });
+
 }
 
 
@@ -68,7 +63,9 @@ function playVoice(id) {
 // =======================
 
 document.addEventListener("keydown", function (e) {
+
     switch (e.key) {
+
         case "1":
             playVoice(1);
             break;
@@ -84,5 +81,7 @@ document.addEventListener("keydown", function (e) {
         case "4":
             playVoice(4);
             break;
+
     }
+
 });
