@@ -1,0 +1,198 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    width:100vw;
+    height:100vh;
+
+    background-color:#000;
+
+    background-image:url("bg.jpg");
+
+    background-position:center center;
+
+    background-repeat:no-repeat;
+
+    background-size:contain;
+
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:"Microsoft YaHei",sans-serif;
+
+    color:white;
+}
+
+
+.overlay{
+
+    background:transparent;
+
+    padding:40px 60px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+}
+
+
+h1{
+
+    margin-bottom:30px;
+
+    font-size:42px;
+
+    text-shadow:
+    2px 2px 5px black;
+
+}
+
+
+.tips{
+
+    font-size:26px;
+
+    line-height:2.2;
+
+    text-shadow:
+    2px 2px 5px black;
+
+}
+
+
+button{
+
+    margin-top:35px;
+
+    padding:15px 35px;
+
+    font-size:22px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:#1976d2;
+
+    color:white;
+}
+
+
+button:hover{
+
+    background:#1565c0;
+
+}
+
+
+
+.volume{
+
+    margin-top:20px;
+
+}
+
+
+.volume span{
+
+    font-size:18px;
+
+    text-shadow:
+    2px 2px 5px black;
+
+}
+
+
+#volumeSlider{
+
+    width:220px;
+
+    margin-top:10px;
+
+    cursor:pointer;
+
+}
+
+
+
+.voice-buttons{
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+
+
+.voice-buttons button{
+
+    width:70px;
+
+    height:70px;
+
+    font-size:30px;
+
+    border-radius:50%;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:#8b0000;
+
+    color:white;
+
+}
+
+
+
+/* 手机适配 */
+
+@media (max-width:600px){
+
+    body{
+
+        background-size:contain;
+
+        background-position:center 25%;
+
+    }
+
+
+    .overlay{
+
+        width:90%;
+
+        padding:25px;
+
+    }
+
+
+    h1{
+
+        font-size:30px;
+
+    }
+
+
+    .tips{
+
+        font-size:20px;
+
+    }
+
+}

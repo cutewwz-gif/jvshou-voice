@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沮授语音</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="overlay">
+
+    <h1>沮授语音</h1>
+	<h1>(按键盘/触摸按钮)<h1>
+
+    <div class="tips">
+
+        <p>1渐营</p>
+        <p>2渐营</p>
+        <p>3矢北</p>
+        <p>4阵亡</p>
+
+    </div>
+	<div class="voice-buttons">
+
+    <button onclick="playVoice(1)">
+        1
+    </button>
+
+    <button onclick="playVoice(2)">
+        2
+    </button>
+
+    <button onclick="playVoice(3)">
+        3
+    </button>
+
+    <button onclick="playVoice(4)">
+        4
+    </button>
+
+</div>
+
+    <button id="bgmButton">
+        ▶ 播放背景音乐
+    </button>
+	<div class="volume">
+    <span>背景音乐音量</span><br>
+    <input
+        type="range"
+        id="volumeSlider"
+        min="0"
+        max="100"
+        value="30">
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
